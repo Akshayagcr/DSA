@@ -1,0 +1,31 @@
+
+STL
+    Containers
+        Sequential
+            vector
+            stack
+            queue
+            pair
+        Ordered
+            set
+            multi_set
+            map
+            multi_map
+        Unordered
+            unordered_set
+            unordered_map
+    Iterators
+        begin(), end()
+    Algorithms
+        upper_bound
+        lower_bound
+        sort(comparator)
+        max_element
+        min_element
+        accumulate
+        reverse
+        count
+        find
+        next_permutation
+        prev_permutation
+    Functors
