@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int main(){
     /*
     Data types:
@@ -63,7 +64,7 @@ int main(){
 
   /*
   if we need to add a character to a string n number of times then use push_back('char') function
-  as its timecomplexity is O(1) where as if we use s = s + 'char' then c++ needsto make copy of s then add character to it na dthen assign its value
+  as its timecomplexity is O(1) where as if we use s = s + 'char' then c++ needs to make copy of s then add character to it then assign its value
   so its timecomplexty becomes O(s.size())
   */
 
@@ -93,9 +94,8 @@ void printArray(int arr[], int arraySize){....}
 1D : void func1(int arr[])
 2D : void func2(int arr[][20])
 In competetive programming we avoid passing array to function as we cannot mention the size of the array in function signature as mention above.
-instead we declare array globally with max size i.e. upper bound of the constrain mentioned in the question. also by eclaring array globally we can directly access it without passing it to function.
-
-
+instead we declare array globally with max size i.e. upper bound of the constrain mentioned in the question. 
+also by declaring array globally we can directly access it without passing it to function.
 */
 
 /*
@@ -107,5 +107,7 @@ min()
 
 
 
+
+return 0; // Optional
 
 }

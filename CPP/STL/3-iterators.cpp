@@ -3,13 +3,12 @@ using namespace std;
 
 int main(){
     /*
-
         We cannot use indexing in collection like map, set like we use in vector
         to access elements so there we use iterators.
     */
    vector<int> v = {1, 2, 3, 4};
    vector<int> ::iterator it = v.begin();// returns iterator pointing to 1
-   cout<< *it << endl; // access elemnt using *
+   cout<< *it << endl; // access element using *
    cout<< *(it + 1) << endl;
    v.end(); // returns iterator ponting to memory location next to last element i.e. memory location next to 4
 
@@ -45,7 +44,6 @@ int main(){
     }
 
     // auto keyword. Automatically determines data type by looking at the assigned value
-
 
     auto a = 1.0;
     cout<< "a : " << a << endl;

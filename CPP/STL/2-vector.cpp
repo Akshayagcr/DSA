@@ -15,10 +15,10 @@ void nestedVectors(){
     cout<< "Printing vector<pair<int, int>> :" << v[0].first << " " << v[0].second << endl;
 
     vector<int> v1[10]; // Array of vector ** size we can take from input like vector<int> v[n] : where n is take as input.
-    // We can access array of vector similar to 2D array : v1[row][column
+    // We can access array of vector similar to 2D array : v1[row][column]
     
     vector<vector<int> > v2; // vector of vector
-    // We can access vector of vector similar to 2D array : v1[row][column
+    // We can access vector of vector similar to 2D array : v1[row][column]
     // v2.push_back(vector<int> ()) : to add an vector.
 }
 
@@ -55,7 +55,7 @@ int main(){
     printVector(v3);
 
     vector<int> v4 = {10};
-    vector<int> v5 = v4; // Creates a deep copy. changes in v4 are not reflected in v5 vice vers. O(n) time complexity
+    vector<int> v5 = v4; // Creates a deep copy. changes in v4 are not reflected in v5 vice versa. O(n) time complexity
     // vector<int> &v5 = v4; // Creates a shallow copy. changes in v4 are reflected in v5 vice vers.
     v4.push_back(3);
     printVector(v4);
