@@ -1,6 +1,49 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+  /**
+   * below function prints input vector
+   * We have used const to make the vector immutable and it ensures that we dont accidently modify it.
+   * And we have used & to pass vector by reference which avoids making unnecessary copies.
+   */
+  void printVector(const vector<int> &v){
+    for(auto &ele : v){
+      cout << ele << " ";
+    }
+    cout << "\n";
+  }
+
+  /**
+   * In the below function we return vector by value i.e. copy of vector v
+   * This is preferred approach as we cannot return reference to local objects like vector v
+   * As they will go out of scope when the function terminates
+   * if we try to use reference in return value to refer local object it will result in compile time error.
+   * 
+   * 
+   * STL containers that are temporary or constructed locally within the function.
+   * In C++11 and later, returning by value is often the most efficient approach because modern compilers can optimize 
+   * it using copy elision or move semantics.
+   * 
+   *      When you return an object by value, the compiler will try to use Return Value Optimization (RVO) or 
+   *      Named Return Value Optimization (NRVO) to avoid copying the object. These optimizations make the return of 
+   *      large objects highly efficient.
+   * 
+   *      If copy elision is not applied, the compiler will use move semantics to transfer ownership of the object 
+   *      (using the move constructor) instead of copying it.
+   *      
+   *      For small containers (e.g., std::array or trivially copyable types), the compiler may choose to copy them directly, 
+   *      which is typically very cheap.
+   * 
+   * 
+   */
+  vector<int> generateRange(){
+    vector<int> v;
+    for(int i = 0; i < 5; i++){
+      v.push_back(i);
+    }
+    return v;
+  }
+
 int main(){
     /*
     Data types:
