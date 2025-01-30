@@ -25,9 +25,11 @@ Stack questions
     We find NSL and NSR index array and find width and then use that width to find area by multiplying it with height i.e input
 7. Maximum area in a binary matrix.
     Convert 2d array to 1d array i.e find maximum area of histogram of all 1d array in the 2d array.
-8. Min stack using additional space.
+8. Rain water trapping.
+        In this problem we need to find min of greatest element in left and right subarray not the NGL or NGR
+9. Min stack using additional space.
     We use an additional stack to store the current minimum element.
-9. Min stack with O(1) additional space.
+10. Min stack with O(1) additional space.
     We use only one variable to store minimum element by store 2*ele - minimum element in stack 
     when a element smaller than minimum is encountered and this works like a flag i.e. when we again encounter it
     will find that it is less than current minimum which me we need to return the current minimum 
