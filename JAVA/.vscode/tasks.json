@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Java silently with IO files (always clean)",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/C",
+        "javac \"${file}\" && (java -cp \"${workspaceFolder}\" ${relativeFileDirname}.${fileBasenameNoExtension} < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\output.txt\" || echo Program crashed) & del /q \"${fileDirname}\\${fileBasenameNoExtension}.class\""
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": false
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
