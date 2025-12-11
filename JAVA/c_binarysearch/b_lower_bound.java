@@ -15,7 +15,7 @@ public class b_lower_bound {
         if element does not exists and is the largest return length of array 
     */
     static int lowerBound(int[] arr, int ele){
-        int pos = arr.length, low = 0, high = arr.length - 1, mid;
+        int low = 0, high = arr.length - 1, mid, pos = arr.length;
         while(low <= high){
             mid = low + (high - low) / 2;
             if(arr[mid] >= ele){

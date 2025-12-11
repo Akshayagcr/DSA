@@ -1,13 +1,13 @@
-package c_binarysearch;
+package a_general;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    https://www.spoj.com/problems/AGGRCOW/
+    Java template class for competitive programming.
 */
-public class i_AGGRCOW_SPOJ {
-    
+public class Main {
+
     static FastReader in = new FastReader();
     static PrintWriter out = new PrintWriter(System.out);
 
@@ -66,49 +66,9 @@ public class i_AGGRCOW_SPOJ {
     }
 
     static void solve() {
-        int t, n, c;
-        t = in.nextInt();
-        while(t > 0){
-            n = in.nextInt();
-            c = in.nextInt();
-            int[] arr = new int[n];
-            for(int i = 0; i < n; i++){
-                arr[i] = in.nextInt();
-            }
-            Arrays.sort(arr);
-            out.print(maximumDistance(arr, c) + "\n");
-            t--;
-        }
-    }
-
-    /*
-        T T T T T T F F F F F
-    */
-    static int maximumDistance(int[] arr, int noOfCows){
-        int low = 1, high = arr[arr.length - 1] - arr[0], mid, ans = -1;
-        boolean res;
-        while(low <= high){
-            mid = low + (high - low) / 2;
-            res = predicateFn(arr, mid, noOfCows);
-            if(res){
-                ans = mid;
-                low =  mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-        return ans;
-    }
-
-    static boolean predicateFn(int[] arr, int mid, int totalCows){
-        int noOfPlacedCows = 1, lastPlacedPos = 0, diff;
-        for(int i = 1; i < arr.length; i++){
-            diff = arr[i] - arr[lastPlacedPos];
-            if(diff >= mid){
-                noOfPlacedCows++;
-                lastPlacedPos = i;
-            }
-        }
-        return noOfPlacedCows >= totalCows;
+        // Start coding here !!!!!!
+        int a = in.nextInt();
+        int b = in.nextInt();
+        out.println(a + b);
     }
 }

@@ -55,3 +55,10 @@ Generic approach : use a temporary variable and whenever we find a possible cand
 Question: Rotated sorted array: think in terms of true and false
 Question: Peak of element: think in terms of true and false
 Question: Find square root of a number
+
+********************************************************************************************************
+
+Learnings :-
+1. Carefully think about the low & high values i.e. search space
+2. Draw the expected predicate function output and decide the direction to move carefully.
+3. ****** Most IMP !!!!!!!! - Implementation of predicate function 
