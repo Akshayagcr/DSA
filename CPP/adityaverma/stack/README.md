@@ -1,6 +1,6 @@
 Stack question identification
 1. Question will contain array and brute force approach will result in nested loop (n^2)
-2. Nested loop in brute force will depend on each other i.e. j = fn(i) inner lopp will depend on outer loop. 
+2. Nested loop in brute force will depend on each other i.e. j = fn(i) inner loop will depend on outer loop. 
 
 Stack questions
 
@@ -12,7 +12,7 @@ Stack questions
     from left to right.
     We use stack to keep track of left and right sub array
     initialize the output array with -1
-    then start iterating the implement a while loop which pops elemnts from stack 
+    then start iterating the implement a while loop which pops elements from stack 
         if stk.top is greater when finding smallest element
         if stk.top is less when finding greatest element
     then check if stk is empty or not
@@ -26,7 +26,7 @@ Stack questions
 7. Maximum area in a binary matrix.
     Convert 2d array to 1d array i.e find maximum area of histogram of all 1d array in the 2d array.
 8. Rain water trapping.
-        In this problem we need to find min of greatest element in left and right subarray not the NGL or NGR
+        In this problem we need to find min of greatest element in left and right sub-array not the NGL or NGR
 9. Min stack using additional space.
     We use an additional stack to store the current minimum element.
 10. Min stack with O(1) additional space.

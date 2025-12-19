@@ -6,7 +6,7 @@ import java.util.*;
 /*
     Java template class for competitive programming.
 */
-public class Main {
+public class FastIOTemplate {
 
     static FastReader in = new FastReader();
     static PrintWriter out = new PrintWriter(System.out);
@@ -60,6 +60,13 @@ public class Main {
 
     }
     
+    static void printArray(int[] arr){
+        for(int ele : arr){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         solve();
         out.flush();
