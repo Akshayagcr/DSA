@@ -8,14 +8,14 @@ In brute force approach we do repetitive work i.e. if k = 3 then we first sum in
 
 Optimized approach : instead of every time summing the window we just need to subtract first element and add new element 
 
-Identification: whenever a question involves a subarray or substring and a window size is given and we are asked about minimum, maximum etc then the problem is of sliding window 
+Identification: whenever a question involves a sub-array or substring and a window size is given and we are asked about minimum, maximum etc then the problem is of sliding window 
 
 Types of sliding window:
 1: fixed length sliding window 
-2: variable length sliding window : sometime in question the length of sliding window will not be given instead it will be variable like find the maximum length subarray with sum equal to 5
+2: variable length sliding window : sometime in question the length of sliding window will not be given instead it will be variable like find the maximum length sub-array with sum equal to 5
 
 
-Question: maximum sum subarray of size k
+Question: maximum sum sub-array of size k
 
 General structure of sliding window code for fixed size window :
 
@@ -24,7 +24,7 @@ i: window start, j : window end
 i, j = 0
 while(j < array end){
     1: do calculations
-    if(check if window size is achived or not){
+    if(check if window size is achieved or not){
         j++
     } else {
         get answer from calculation
@@ -64,7 +64,7 @@ Once we have hit the window size i.e. in else condition we if the variable has b
 
 While sliding window i.e. when incrementing I we update character frequency map and variable 
 
-Question: maximum of all subarray of size k
+Question: maximum of all sub-array of size k
 
 We are given an array and a window size k we need to return an array containing maximum element of every window of size k
 
@@ -78,29 +78,29 @@ When sliding the window ahead i.e. when incrementing I we need to check if queue
 
 ***** Variable length sliding window 
 
-Question: Longest subarray of sum k
+Question: Longest sub-array of sum k
 
 Difference and identification of variable sliding window pattern :
 
-It is same as fixed length sliding window we will be given an array or string and subarray or substring will be involved now the only difference is that in place of window size k we will be given a condition 
+It is same as fixed length sliding window we will be given an array or string and sub-array or substring will be involved now the only difference is that in place of window size k we will be given a condition 
 
 General structure of variable sliding window 
 
-I,j = 0
-While(j < are.length){
-    Do calculation
-    If(calculation < k){
-        J++
-    }
-    If(calculation == k){
+low, high = 0
+While(high < arr.length){
+    Do calculation for arr[high]
+    if(calculation < k){
+        high++
+    } else if(calculation == k){
         Get answer from calculation 
-        J++
-    }
-    If(calculation > k){
+        high++
+    } else {
         While(calculation > k){
-            Remove element I from calculation 
-            I++
+            Remove arr[low] from calculation 
+            low++
         }
+        check if we have achieved the target i.e. calculation == k
+        high++  // Increment high to avoid re-processing of arr[high]
     }
 }
 
@@ -127,11 +127,11 @@ Question: Pick a toy
 We have a rack of toy we can only pick two types of toy and that to in continuous and we need to take maximum number of toys
 
 This problem is equal to 
-Return largest subarray with unique character number of unique character equal to k
+Return largest sub-array with unique character number of unique character equal to k
 
 
 Question: minimum window substring 
 
-We are given two strings one longer than other and we need to find a miminum substring which is equal to th smaller string.
+We are given two strings one longer than other and we need to find a minimum substring which is equal to th smaller string.
 
-Calculation : We need to use and hashmap filled with frequency characted of smaller string and a count variable which keep track of number of character whose frequency count is Zero. once count reached zero we get a possible candidate of ans we increase variable i i.e. shrink window till count does not becomes equal to zero.
+Calculation : We need to use and hashmap filled with frequency character of smaller string and a count variable which keep track of number of character whose frequency count is Zero. once count reached zero we get a possible candidate of ans we increase variable i i.e. shrink window till count does not becomes equal to zero.
